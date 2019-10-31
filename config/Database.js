@@ -24,6 +24,7 @@ const JobSchema = {
 export default class Database {
 
   static realmInstance = null; // Use a singleton connection to realm for performance.
+  static get JobSchema() { return JobSchema; }
 
   static async getRealmInstance(options = {}) {
 
